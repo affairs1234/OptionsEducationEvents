@@ -153,15 +153,6 @@ body {
   }
 @media screen and (max-width: 360px) {
     #topbar .events {
-    padding: 4px;
-    display: inline-block;
-    line-height: 1px;
-    margin: auto;
-    text-align: center;
-    }
-  }
-  @media screen and (max-width: 320px) {
-    #topbar .events {
     padding: 2px;
     display: inline-block;
     line-height: 1px;
