@@ -110,6 +110,13 @@ body {
     height: 40px;
     padding: 0;
     color: black;
+    z-index: 997;
+  }
+
+  .sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
   
   #topbar .contact-info a {
@@ -212,7 +219,7 @@ body {
     background: url("../img/hero-bg.png") top center;
     background-size: contain;
     background-attachment: fixed;
-    margin-bottom: -200px;
+    margin-bottom: -170px;
   }
   
   #hero .container {
@@ -225,11 +232,11 @@ body {
     font-weight: 900;
     line-height: 56px;
     text-transform: uppercase;
-    color: green;
+    color: red;
   }
   
   #hero h2 {
-    color: #005587;
+    color: #f3d03e;
     margin: 10px 0 0 0;
     font-size: 54px;
     font-weight: 800;
@@ -282,13 +289,13 @@ body {
     }
   
     #hero h1 {
-      font-size: 28px;
+      font-size: 38px;
       line-height: 36px;
     }
   
     #hero h2 {
-      font-size: 18px;
-      line-height: 44px;
+      font-size: 28px;
+      line-height: 24px;
       margin-bottom: 30px;
     }
   }
