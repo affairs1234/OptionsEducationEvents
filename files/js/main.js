@@ -1,5 +1,4 @@
-
-(function() {
+(function () {
   "use strict";
 
   const select = (el, all = false) => {
@@ -32,7 +31,7 @@
   /**
    * Navbar links active state on scroll
    */
-  
+
   const scrollto = (el) => {
     let header = select('#header')
     let offset = header.offsetHeight
@@ -48,7 +47,7 @@
     })
   }
 
- 
+
   let backtotop = select('.whatsapp')
   if (backtotop) {
     const toggleBacktotop = () => {
@@ -62,8 +61,8 @@
     onscroll(document, toggleBacktotop)
   }
 
-  
-  on('click', '.scrollto', function(e) {
+
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -111,9 +110,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -121,13 +120,46 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
     }
 
   });
+  let deadline = new Date("Sep 30, 2023 09:00:00")
+    .getTime();
+
+  // To call defined fuction every second
+  let x = setInterval(function () {
+
+    // Getting current time in required format
+    let now = new Date().getTime();
+
+    // Calculating the difference
+    let t = deadline - now;
+
+    // Getting value of days, hours, minutes, seconds
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor(
+      (t % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor(
+      (t % (1000 * 60)) / 1000);
+
+    // Output the remaining time
+    document.getElementById("demo").innerHTML =
+      days + "d " + hours + "h " +
+      minutes + "m " + seconds + "s ";
+
+    // Output for over time
+    if (t < 0) {
+      clearInterval(x);
+      document.getElementById("demo")
+        .innerHTML = "EXPIRED";
+    }
+  }, 1000);
 
   /**
    * Animation on scroll
