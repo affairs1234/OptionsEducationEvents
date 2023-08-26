@@ -151,6 +151,23 @@ body {
     transition: 0.3s;
     margin: auto;
   }
+@media screen and (max-width: 360px) {
+    #topbar .events {
+    padding: 4px 8px;
+    display: inline-block;
+    line-height: 1px;
+    margin: auto;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    #topbar .events {
+    padding: 2.5px;
+    display: inline-block;
+    line-height: 1px;
+    margin: auto;
+    text-align: center;
+    }
+  }
 
   .events-nav {
     color:#ebeb16 ;
