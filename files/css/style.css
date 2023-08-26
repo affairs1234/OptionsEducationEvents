@@ -185,10 +185,6 @@ body {
     height: 70px;
   }
   
-  #header.fixed-top {
-    background: #191919;
-  }
-  
   #header .logo {
     font-size: 30px;
     margin: 0;
@@ -294,9 +290,9 @@ body {
     }
   
     #hero h2 {
-      font-size: 28px;
+      font-size: 20px;
       line-height: 24px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
   
