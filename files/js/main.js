@@ -1,3 +1,4 @@
+
 (function () {
   "use strict";
 
@@ -48,6 +49,23 @@
   }
 
 
+  // let selectHeader = select('#header')
+  // if (selectHeader) {
+  //   let headerOffset = selectHeader.offsetTop
+  //   let nextElement = selectHeader.nextElementSibling
+  //   const headerFixed = () => {
+  //     if ((headerOffset - window.scrollY) <= 0) {
+  //       selectHeader.classList.add('fixed-top')
+  //       nextElement.classList.add('scrolled-offset')
+  //     } else {
+  //       selectHeader.classList.remove('fixed-top')
+  //       nextElement.classList.remove('scrolled-offset')
+  //     }
+  //   }
+  //   window.addEventListener('load', headerFixed)
+  //   onscroll(document, headerFixed)
+  // }
+
   let backtotop = select('.whatsapp')
   if (backtotop) {
     const toggleBacktotop = () => {
@@ -61,21 +79,6 @@
     onscroll(document, toggleBacktotop)
   }
 
-
-  on('click', '.scrollto', function (e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
 
   /**
    * Scroll with ofset on page load with hash links in the url
@@ -150,8 +153,8 @@
 
     // Output the remaining time
     document.getElementById("demo").innerHTML =
-      days + "d " + hours + "h " +
-      minutes + "m " + seconds + "s ";
+      days + "D " + hours + "H " +
+      minutes + "M " + seconds + "s ";
 
     // Output for over time
     if (t < 0) {
