@@ -211,7 +211,7 @@ body {
 
   #hero {
      width: 100%;
-    height: 90vh;
+    height: 80vh;
     background: url("../img/hero-bg.jpg") top center;
     -moz-background-size: cover;
      -o-background-size: cover;
@@ -325,8 +325,8 @@ body {
   @media (max-width: 992px) {
    #hero {
       margin-bottom: 0;
-      height: 100vh;
-      background: url("../img/hero-bg.png") top center;
+      height: 70vh;
+      background: url("../img/hero-bg2.jpg") top center;
     background-size: cover;
     margin-bottom: -200px;
     }
