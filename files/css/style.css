@@ -257,6 +257,7 @@ body {
     font-size: 25px;
     font-weight: 600;
     text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
 
   }
 
@@ -286,7 +287,7 @@ body {
     font-size: 25px;
     font-weight: 600;
     text-transform: uppercase;
-
+font-family: "Open Sans", sans-serif;
   }
 
   .content-sm h3 i {
