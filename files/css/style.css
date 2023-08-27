@@ -249,6 +249,7 @@ body {
     font-size: 28px;
     font-weight: 800;
     text-transform: uppercase;
+      font-family: "Open Sans", sans-serif;
   }
   
   .content-lg h3{
@@ -279,6 +280,7 @@ body {
     font-size: 28px;
     font-weight: 800;
     text-transform: uppercase;
+      font-family: "Open Sans", sans-serif;
   }
   
   .content-sm h3{
