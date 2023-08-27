@@ -130,39 +130,39 @@
     }
 
   });
-  let deadline = new Date("Sep 30, 2023 09:00:00")
-    .getTime();
-
-  // To call defined fuction every second
-  let x = setInterval(function () {
-
-    // Getting current time in required format
-    let now = new Date().getTime();
-
-    // Calculating the difference
-    let t = deadline - now;
-
-    // Getting value of days, hours, minutes, seconds
-    let days = Math.floor(t / (1000 * 60 * 60 * 24));
-    let hours = Math.floor(
-      (t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor(
-      (t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor(
-      (t % (1000 * 60)) / 1000);
-
-    // Output the remaining time
-    document.getElementById("demo").innerHTML =
-      days + "D " + hours + "H " +
-      minutes + "M " + seconds + "s ";
-
-    // Output for over time
-    if (t < 0) {
-      clearInterval(x);
-      document.getElementById("demo")
-        .innerHTML = "EXPIRED";
-    }
-  }, 1000);
+ let dayBox = document.getElementById("day-box");
+let hrBox = document.getElementById("hr-box");
+let minBox = document.getElementById("min-box");
+let secBox = document.getElementById("sec-box");
+let endDate = new Date(2023, 9, 30, 9, 0);
+let endTime = endDate.getTime();
+function countdown() {
+  let todayDate = new Date();
+  let todayTime = todayDate.getTime();
+  let remainingTime = endTime - todayTime;
+  let oneMin = 60 * 1000;
+  let oneHr = 60 * oneMin;
+  let oneDay = 24 * oneHr;
+  let addZeroes = (num) => (num < 10 ? `0${num}` : num);
+  if (endTime < todayTime) {
+    clearInterval(i);
+    document.querySelector(
+      ".countdown"
+    ).innerHTML = `<h1>Countdown had expired!</h1>`;
+  }
+  else {
+    let daysLeft = Math.floor(remainingTime / oneDay);
+    let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
+    let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
+    let secsLeft = Math.floor((remainingTime % oneMin) / 1000);
+    dayBox.textContent = addZeroes(daysLeft);
+    hrBox.textContent = addZeroes(hrsLeft);
+    minBox.textContent = addZeroes(minsLeft);
+    secBox.textContent = addZeroes(secsLeft);
+  }
+}
+let i = setInterval(countdown, 1000);
+countdown();
 
   /**
    * Animation on scroll
