@@ -232,7 +232,10 @@ body {
     height: fit-content;
     text-align: center;
     padding: 20px;
-    border-radius: 15px;  
+    border-radius: 15px; 
+      width: 500px;
+    border: 2px solid green;
+    float: right;
   }
   
   .content-lg h1 {
