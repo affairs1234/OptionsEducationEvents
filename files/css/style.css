@@ -587,3 +587,44 @@ body {
     color: green;
     font-size: 16px;
   }
+
+.countdown{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .box{
+    width: 70px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.5);
+    font-size: 10px;
+}
+span.num{
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  color: #fff;
+  font-size: 30px;
+}
+span.text{
+  font-size: 1.2em;
+  background-color: #2887e3;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 0;
+  font-weight: 400;
+  color: #fff
+}
