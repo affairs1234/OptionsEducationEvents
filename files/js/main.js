@@ -134,7 +134,7 @@
 let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
-let endDate = new Date(Sep 30, 2023 09:00:00);
+let endDate = new Date("Sep 30, 2023 09:00:00");
 let endTime = endDate.getTime();
 function countdown() {
   let todayDate = new Date();
