@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+6<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,6 +32,13 @@ function gtag_report_conversion(url) {
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11317176789">
 </script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11317176789');
+  </script>
 </head>
 
 <body>
@@ -430,13 +437,7 @@ function gtag_report_conversion(url) {
   <script src="files/functionalities/isotope-layout/isotope.pkgd.min.js"></script>
   <!-- Template Main JS File -->
   <script src="files/js/main.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-11317176789');
-</script>
 </body>
 
 </html>
