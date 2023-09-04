@@ -276,7 +276,80 @@ src="https://www.facebook.com/tr?id=815601776929866&ev=PageView&noscript=1"
           </div>
         </div>
         <div class="book-a-seat pb-5">
-          <script type="text/javascript" src="https://form.jotform.com/jsform/232372616378057"></script>
+          <form action="files/contact.php" method="post" role="form" class="php-email-form">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="first_name">First Name</label>
+                <input type="text" name="firstname" class="form-control" placeholder="Enter your First name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="lastname" class="form-control" placeholder="Enter your Last name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" class="form-control" placeholder="Enter your Phone" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="study_destination">Preferred Study Destination</label>
+                <select name="study_destination" class="form-control" required>
+                    <option value="">Please Select</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="preferred_intake">Preferred Intake</label>
+                <select name="preferred_intake" class="form-control" required>
+                    <option value="">Please Select</option>
+                    <option value="Jan">January</option>
+                    <option value="Feb">February</option>
+                    <option value="Apr">April</option>
+                    <option value="Jul">July</option>
+                    <option value="Sep">September</option>
+                    <option value="Nov">November</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="level_of_education">Highest Level Of Education</label>
+                <input type="text" name="level_of_education" class="form-control"
+                    placeholder="Enter your Highest Level Of Education" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="how_did_you_hear_about_us">How did you hear about us?</label>
+                <select name="how_did_you_hear_about_us" class="form-control" required>
+                    <option value="">Please Select</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Google">Google</option>
+                    <option value="Instagram">Instagram</option>\
+                    <option value="WhatsApp Tv">WhatsApp Tv</option>
+                    <option value="Youtube">Youtube</option>
+                    <option value="internet search">internet search</option>
+                    <option value="Snapchat">Snapchat</option>
+                    <option value="Radio Jingle">Radio Jingle</option>
+                    <option value="influencer">influencer</option>
+                    <option value="Referral from a friend">Referral from a friend</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="my-3 text-center mx-auto">
+                <div class="loading">Loading</div>
+                <div class="error-message text-center"></div>
+                <div class="sent-message">Looking forward to seeing you at the event. Thank you!</div>
+            </div>
+            <div class="form-group col-md-12 text-center">
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+    </form>
         </div>
       </div>
     </section>
@@ -452,6 +525,7 @@ src="https://www.facebook.com/tr?id=815601776929866&ev=PageView&noscript=1"
   <script src="files/functionalities/isotope-layout/isotope.pkgd.min.js"></script>
   <!-- Template Main JS File -->
   <script src="files/js/main.js"></script>
+  <script src="files/validate.js"></script>
 
 </body>
 
