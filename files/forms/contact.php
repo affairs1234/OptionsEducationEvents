@@ -1,7 +1,7 @@
 <?php
 
 
-  $receiving_email_address = 'abikoyeboluwatife@gmail.com';
+  $receiving_email_address = 'events@optionseducation.net';
 
   if( file_exists($php_email_form = 'php-email-form.php' )) {
     include( $php_email_form );
