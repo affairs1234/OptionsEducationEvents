@@ -116,23 +116,20 @@ class PHP_Email_Form {
                       if( $this->error ) {
                         return $this->error;
                       }
-                      $message = '<html>
-                      <head>
-                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                        <title></title>
-                        </head>
-                      <body>
-                      <table rules="all" style="border-color: #666;" cellpadding="10">
-                      <tr style='background: #eee;'><td><strong>From:</strong> </td><td>" . $from_firstname . ' ' . $from_lastname . "</td></tr>
-                     <tr><td><strong>Email:</strong> </td><td>" . $from_email . "</td></tr>
-                    <tr><td><strong>Phone:</strong> </td><td>" . $from_phone . "</td></tr>
-                     <tr><td><strong>Preferred Study Destination:</strong> </td><td>" . $study_destination . "</td></tr>
-                     <tr><td><strong>Preferred Intake:</strong> </td><td>" . $preferred_intake . "</td></tr>"
-                    <tr><td><strong>Level of Education:</strong> </td><td
-                        >" . $level_of_education . "</td></tr>
-                      <tr><td><strong>How did you hear about us:</strong> </td><td>" . $how_did_you_hear_about_us . "</td></tr>
-                       </table>
-                       </body></html>';
+                      $subject='New Form Submission';
+                      $message = '';
+                      $message .= '<html><body>';
+                      $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
+                      $message .= "<tr style='background: #eee;'><td><strong>From:</strong> </td><td>" . $from_firstname . ' ' . $from_lastname . "</td></tr>";
+                      $message .= "<tr><td><strong>Email:</strong> </td><td>" . $from_email . "</td></tr>";
+                      $message .= "<tr><td><strong>Phone:</strong> </td><td>" . $from_phone . "</td></tr>";
+                      $message .= "<tr><td><strong>Preferred Study Destination:</strong> </td><td>" . $study_destination . "</td></tr>";
+                      $message .= "<tr><td><strong>Preferred Intake:</strong> </td><td>" . $preferred_intake . "</td></tr>";
+                      $message .= "<tr><td><strong>Level of Education:</strong> </td><td
+                        >" . $level_of_education . "</td></tr>";
+                        $message .= "<tr><td><strong>How did you hear about us:</strong> </td><td>" . $how_did_you_hear_about_us . "</td></tr>";
+                        $message .= "</table>";
+                        $message .= "</body></html>";
 
                         $headers = "From: $from_firstname $from_lastname <$from_email>" . "\r\n";
                         $headers .= "Reply-To: $from_email" . "\r\n";
@@ -170,7 +167,7 @@ class PHP_Email_Form {
                           }
                         }
 
-                        if( mail($to, $message, $headers) ) {
+                        if( mail($to, $subject, $message, $headers) ) {
                           return 'OK';
                         } else {
                           return 'Unable to send email!';
