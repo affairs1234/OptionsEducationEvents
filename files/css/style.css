@@ -3,7 +3,7 @@ body {
     color: #444444;
   }
   a {
-    color: green;
+    color: #005587;
     text-decoration: none;
   }
   a:hover {
@@ -69,7 +69,7 @@ body {
     position: fixed;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
-    border: 6px solid green;
+    border: 6px solid #005587;
     border-top-color: #f3d03e;
     border-radius: 50%;
     width: 60px;
@@ -129,7 +129,7 @@ body {
   }
   
   #topbar .contact-info i {
-    color: green;
+    color: #005587;
     line-height: 0;
     margin-right: 5px;
   }
@@ -179,7 +179,7 @@ body {
   }
   
   #header {
-    background:green;
+    background:#005587;
     transition: all 0.5s;
     z-index: 997;
     height: 70px;
@@ -234,7 +234,7 @@ body {
     padding: 20px;
     border-radius: 15px; 
       width: 500px;
-    border: 2px solid green;
+    border: 2px solid #005587;
     float: right;
   }
   
@@ -243,7 +243,7 @@ body {
     font-size:35px;
     font-weight: 800;
     text-transform: uppercase;
-    color: green;
+    color: #005587;
   }
   
   .content-lg h2 {
@@ -266,7 +266,7 @@ body {
   }
 
   #hero .content-lg h3 i {
-    color: green;
+    color: #005587;
   }
 
 .content-sm h1{
@@ -274,7 +274,7 @@ body {
     font-size:35px;
     font-weight: 800;
     text-transform: uppercase;
-    color: green;
+    color: #005587;
   }
   
   .content-sm h2{
@@ -296,7 +296,7 @@ font-family: "Open Sans", sans-serif;
   }
 
   .content-sm h3 i {
-    color: green;
+    color: #005587;
   }
  
   .btn-get-started  {
@@ -311,10 +311,10 @@ font-family: "Open Sans", sans-serif;
     border-radius: 50px;
     transition: 0.5s;
     color: #f3d03e;
-    background: green;
+    background: #005587;
   }
    .btn-get-started:hover {
-    background:green;
+    background:#005587;
     color: #f3d03e;
   }
 
@@ -347,7 +347,7 @@ font-family: "Open Sans", sans-serif;
     text-align: center;
     padding: 20px;
     border-radius: 15px;
-    border: 2px solid green;
+    border: 2px solid #005587;
     margin-bottom: 40px;
       display: block;
     }
@@ -383,7 +383,7 @@ font-family: "Open Sans", sans-serif;
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
-    color: green;
+    color: #005587;
   }
   
   .section-title h2::before {
@@ -473,7 +473,7 @@ font-family: "Open Sans", sans-serif;
   
   .why-us .content {
     padding: 30px;
-    background: green;
+    background: #005587;
     border-radius: 4px;
     color: #fff;
   }
@@ -539,7 +539,7 @@ font-family: "Open Sans", sans-serif;
   
   .contact .info-box i {
     font-size: 32px;
-    color: green;
+    color: #005587;
     border-radius: 50%;
     padding: 8px;
     border: 2px dotted #f3d03e;
@@ -547,7 +547,7 @@ font-family: "Open Sans", sans-serif;
   
   .contact .info-box h3 {
     font-size: 20px;
-    color: green;
+    color: #005587;
     font-weight: 700;
     margin: 10px 0;
   }
@@ -558,17 +558,6 @@ font-family: "Open Sans", sans-serif;
     font-size: 14px;
     margin-bottom: 0;
   }
-
-  .register .php-email-form {
-    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-    padding: 30px;
-  }
-  .book-a-seat{
-    background-color: #f3d03e;
-    color: green;
-    font-size: 16px;
-  }
-  
   
   #footer {
     color: #444444;
@@ -590,7 +579,7 @@ font-family: "Open Sans", sans-serif;
   }
 
   .partners {
-    color: green;
+    color: #005587;
     font-size: 16px;
   }
 
