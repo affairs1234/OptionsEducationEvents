@@ -116,7 +116,6 @@ class PHP_Email_Form {
                       if( $this->error ) {
                         return $this->error;
                       }
-                        $subject = 'New Form Submission';
                       $message = '<html>
                       <head>
                         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -151,7 +150,16 @@ class PHP_Email_Form {
                         if( $this->attachments ) {
                           $boundary = md5(time());
                           $headers .= "Content-Type: multipart/mixed;boundary=" . $boundary . "\r\n";
-                         
+                          $message = "--" . $boundary . "\r\n";
+                          $message .= "Content-Type: text/html; charset='utf-8'\r\n";
+                          $message .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
+                          $message .= $message . "\r\n";
+                          foreach( $this->attachments as $attachment ) {
+                            $message .= "--" . $boundary . "\r\n";
+                            $message .= "Content-Type: " . $attachment['type'] . "; name=\"" . $attachment['name'] . "\"\r\n";
+                            $message .= "Content-Transfer-Encoding: base64\r\n";
+                            $message .= "Content-Disposition: attachment\r\n";
+                            $message .= chunk_split(base64_encode(file_get_contents($attachment['file']))) . "\r\n";
                           }
                           $message .= "--" . $boundary . "--";
                         }
@@ -162,7 +170,7 @@ class PHP_Email_Form {
                           }
                         }
 
-                        if( mail($to, $subject, $message, $headers) ) {
+                        if( mail($to, $message, $headers) ) {
                           return 'OK';
                         } else {
                           return 'Unable to send email!';
