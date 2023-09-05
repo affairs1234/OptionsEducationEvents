@@ -117,12 +117,11 @@ class PHP_Email_Form {
                         return $this->error;
                       }
                         $subject = 'New Form Submission';
-                      $message = '';
-                      $message .= '<html>
+                      $message = '<html>
                       <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title></title>
-        </head>
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                        <title></title>
+                        </head>
                       <body>
                       <table rules="all" style="border-color: #666;" cellpadding="10">
                       <tr style='background: #eee;'><td><strong>From:</strong> </td><td>" . $from_firstname . ' ' . $from_lastname . "</td></tr>
@@ -152,16 +151,7 @@ class PHP_Email_Form {
                         if( $this->attachments ) {
                           $boundary = md5(time());
                           $headers .= "Content-Type: multipart/mixed;boundary=" . $boundary . "\r\n";
-                          $message = "--" . $boundary . "\r\n";
-                          $message .= "Content-Type: text/html; charset='utf-8'\r\n";
-                          $message .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
-                          $message .= $message . "\r\n";
-                          foreach( $this->attachments as $attachment ) {
-                            $message .= "--" . $boundary . "\r\n";
-                            $message .= "Content-Type: " . $attachment['type'] . "; name=\"" . $attachment['name'] . "\"\r\n";
-                            $message .= "Content-Transfer-Encoding: base64\r\n";
-                            $message .= "Content-Disposition: attachment\r\n";
-                            $message .= chunk_split(base64_encode(file_get_contents($attachment['file']))) . "\r\n";
+                         
                           }
                           $message .= "--" . $boundary . "--";
                         }
