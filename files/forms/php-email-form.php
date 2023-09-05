@@ -116,7 +116,7 @@ class PHP_Email_Form {
                       if( $this->error ) {
                         return $this->error;
                       }
-
+                        $subject = 'New Form Submission';
                       $message = '';
                       $message .= '<html>
                       <head>
@@ -172,7 +172,7 @@ class PHP_Email_Form {
                           }
                         }
 
-                        if( mail($to, $message, $headers) ) {
+                        if( mail($to, $subject, $message, $headers) ) {
                           return 'OK';
                         } else {
                           return 'Unable to send email!';
